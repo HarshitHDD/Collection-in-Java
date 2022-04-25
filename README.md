@@ -10,7 +10,7 @@ Java Collection means a single unit of objects. Java Collection framework provid
 List interface is the child interface of Collection interface. It inhibits a list type data structure in which we can store the ordered collection of objects. It can have duplicate values.
 List interface is implemented by the classes ArrayList, LinkedList, Vector, and Stac
 
-## ArrayList
+### ArrayList
 It is a class of List interface and it provide to make a collection of objects [].
 It allow duplicate objects and maintain the order insertion.
 It store objects in contiguous form.
@@ -82,7 +82,7 @@ outPut:
 
 ```
 
-## LinkedList;
+### LinkedList;
 It is a class of List interface and it provide to make a collection of objects [].
 It allow duplicate objects and maintain the order insertion.
 Unlike ArrayList, it store objects in node form which contains pointer and address for its next node in memory.
@@ -125,7 +125,7 @@ arrayName.getLast() // to get Last object
 arrayName.removeFirst() // to remove First object
 arrayName.removeLast() // to remove Last object
 ```
-## Vector
+### Vector
 Vector uses a dynamic array to store the data elements. It is similar to ArrayList. However, It is synchronized and contains many methods that are not the part of Collection framework.
  example:
  ```
@@ -145,7 +145,7 @@ public class Main{
 }  
  ```
  
- ## Stack
+ ### Stack
 The stack is the subclass of Vector. It implements the last-in-first-out data structure, i.e., Stack. The stack contains all of the methods of Vector class and also provides its methods like boolean push(), boolean peek(), boolean push(object o), which defines its properties.
  example:
  ```
@@ -168,7 +168,7 @@ public class Main{
 # Queue Interface
 Queue interface maintains the first-in-first-out order. It can be defined as an ordered list that is used to hold the elements which are about to be processed. There are various classes like PriorityQueue, Deque, and ArrayDeque which implements the Queue interface.
 
-## PriorityQueue
+### PriorityQueue
 The PriorityQueue class implements the Queue interface. It holds the elements or objects which are to be processed by their priorities. PriorityQueue doesn't allow null values to be stored in the queue.
 Order is not preserved.
 Duplicates allowed 
@@ -195,14 +195,14 @@ public class Main{
  ```
  arrayName.remove("a"); // (object name)
  ```
-## Deque Interface
+### Deque Interface
 Deque interface extends the Queue interface. In Deque, we can remove and add the elements from both the side. Deque stands for a double-ended queue which enables us to perform the operations at both the ends.
 example:
 ```
 Deque d = new ArrayDeque();  
 ```
 
-## ArrayDeque
+### ArrayDeque
 ArrayDeque class implements the Deque interface. It facilitates us to use the Deque. Unlike queue, we can add or delete the elements from both the ends.
 ArrayDeque is faster than ArrayList and Stack and has no capacity restrictions.
 Order is preserved.
@@ -229,17 +229,17 @@ System.out.println(i);
 # Set Interface
 Set Interface in Java is present in java.util package. It extends the Collection interface. It represents the unordered set of elements which doesn't allow us to store the duplicate items. We can store at most one null value in Set. Set is implemented by HashSet, LinkedHashSet, and TreeSet.
 
-## HashSet
-HashSet class implements Set Interface. It represents the collection that uses a hash table for storage. Hashing is used to store the elements in the HashSet. It contains unique items.
-and in HashMap however, store items can be store in "key/value" pairs, and you can access them by an index of another type (e.g. a String).
+### HashMap
+HashMap class implements Set Interface. It represents the collection that uses a Key/Value pairs for storage. Hashing is used to store the elements in the HashMap.It contains unique items(keys).
+so, the full items or object are store in "key/value" pairs, and you can access them by an key.
 
 example:
 ```
-import java.util.HashSet;  
+import java.util.HashMap;  
 public class Main{  
   public static void main(String args[]){  
 //Creating HashSet and adding elements  
-    HashSet<String,String> arrayName=new HashSet<String,String>();  
+    HashMapString,String> arrayName=new HashMap<String,String>();  
     arrayName.put("one","1");  
     arrayName.put("two","2"); 
     arrayName.put("three","3"); 
@@ -264,8 +264,30 @@ for(String i : arrayName.keySet()){
 System.out.println(i);
 }
 ```
+### HashSet
+HashSet class implements Set Interface. It represents the collection that uses a hash table for storage. Hashing is used to store the elements in the HashSet. It contains unique items.
 
-## LinkedHashSet
+example:
+```
+import java.util.HashSet;  
+public class Main{  
+ public static void main(String args[]){  
+//Creating HashSet and adding elements  
+  HashSet<String> arrayName=new HashSet<String>();  
+  arrayName.add("Ravi");  
+  arrayName.add("Vijay");  
+  arrayName.add("Ravi");  
+  arrayName.add("Ajay");  
+//Traversing elements  
+  Iterator<String> itr=arrayName.iterator();  
+  while(itr.hasNext()){  
+   System.out.println(itr.next());  
+  }  
+ }  
+}  
+```
+
+### LinkedHashSet
 LinkedHashSet class represents the LinkedList implementation of Set Interface. It extends the HashSet class and implements Set interface. Like HashSet, It also contains unique elements. It maintains the insertion order and permits null elements.
 
 example:
@@ -287,14 +309,14 @@ public class Main{
   }  
 }
 ```
-## SortedSet Interface
+### SortedSet Interface
 SortedSet is the alternate of Set interface that provides a total ordering on its elements. The elements of the SortedSet are arranged in the increasing (ascending) order. The SortedSet provides the additional methods that inhibit the natural ordering of the elements.
 
 example:
 ```
 SortedSet<data-type> arrayName = new TreeSet();  
 ```
-## TreeSet
+### TreeSet
 Java TreeSet class implements the Set interface that uses a tree for storage. Like HashSet, TreeSet also contains unique elements. However, the access and retrieval time of TreeSet is quite fast. The elements in TreeSet stored in ascending order.
 ```
 example:
