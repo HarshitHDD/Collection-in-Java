@@ -31,21 +31,55 @@ class Main{
   }
 }
 ```
+
+```
+outPut:
+[obj1,obj2]
+```
+
 #### To remove objects:
 ```
 arrayName.remove("obj1"); //(object_name)
 ```
+
+```
+outPut:
+[obj1]
+```
 #### To change any objects:
 ```
 arrayName.set(0,"object changed"); //(index,object_name)
+```
+
+```
+outPut:
+[object changed,obj2]
 ```
 #### For clear and size:
 ```
 arrayName.clear(); //clear all objects
 arrayName.size(); //to see size
 
+```
+```
+outPut:
+[]
+2
+```
+
 ### For sorting:
+```
+arrayName.add("jack");
+   arrayName.add("john");
+   arrayName.add("rupa"
+   arrayName.add("anthony");
 Collectins.sort(arrayName);
+```
+
+```
+outPut:
+[anthony, jack, john, rupa]
+
 ```
 
 ## LinkedList;
@@ -197,6 +231,7 @@ Set Interface in Java is present in java.util package. It extends the Collection
 
 ## HashSet
 HashSet class implements Set Interface. It represents the collection that uses a hash table for storage. Hashing is used to store the elements in the HashSet. It contains unique items.
+and in HashMap however, store items can be store in "key/value" pairs, and you can access them by an index of another type (e.g. a String).
 
 example:
 ```
@@ -204,11 +239,11 @@ import java.util.HashSet;
 public class Main{  
   public static void main(String args[]){  
 //Creating HashSet and adding elements  
-    HashSet<String> arrayName=new HashSet<String>();  
-    arrayName.add("one");  
-    arrayName.add("two");  
-    arrayName.add("three");  
-    arrayName.add("four");  
+    HashSet<String,String> arrayName=new HashSet<String,String>();  
+    arrayName.put("one","1");  
+    arrayName.put("two","2"); 
+    arrayName.put("three","3"); 
+    arrayName.add("four","4");  
 //Traversing elements  
   Iterator<String> itr=arrayName.iterator();  
     while(itr.hasNext()){  
@@ -216,6 +251,18 @@ public class Main{
     }   
   }  
 }  
+```
+### to access an item and to remmove
+```
+arrayName.get("one");  //(key name)
+arrayName.remove(two"); //(key name)
+arrayName.clear(); // to remove all
+```
+### to loop in hashmap(key/value)
+```
+for(String i : arrayName.keySet()){
+System.out.println(i);
+}
 ```
 
 ## LinkedHashSet
